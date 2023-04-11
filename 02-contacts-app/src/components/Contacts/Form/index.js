@@ -1,7 +1,15 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
-function Form() {
-    const [form, setForm] = useState({fullName: '', phone_number:'' });
+
+const formStyle = {fullName: '', phone_number:'' };
+function Form({addContacts, contacts}) {
+    // console.log(addContacts);
+    const [form, setForm] = useState(formStyle);
+
+    useEffect(()=>{
+        setForm(formStyle);
+    },[contacts]);
+    // With useEffect, the moment the contacts content changes is captured and the content is emptied.
 
     const onChangeInput = (arr) =>{
         setForm({...form,[arr.target.name]:arr.target.value});
@@ -14,7 +22,9 @@ function Form() {
         // console.log('do not work');
         return false;
        }
-    }
+    //    console.log(form);
+        addContacts([...contacts,form]);
+    };
 
   return (
     <form onSubmit={onSubmit}>
@@ -22,6 +32,7 @@ function Form() {
         <input 
         name='fullName' 
         placeholder='Full Name'
+        value={form.fullName}
         onChange={onChangeInput}
          />
         </div>
@@ -29,6 +40,7 @@ function Form() {
         <input 
         name='phone_number' 
         placeholder='Phone Number'
+        value={form.phone_number}
         onChange={onChangeInput}
          />
         </div>
