@@ -4,6 +4,16 @@ function List({contacts}) {
 
     const [filterText,setFilterText] = useState("");
 
+    const filtered = contacts.filter((item)=>{
+      return Object.keys(item).some((key)=>
+        item[key]
+        .toString()
+        .toLowerCase()
+        .includes(filterText.toLocaleLowerCase())
+      );
+    });
+
+    console.log("filtered",filtered);
   return (
     <div>
         <input 
@@ -12,7 +22,7 @@ function List({contacts}) {
         onChange={(e)=> setFilterText(e.target.value)}
          />
         <ul>
-            {contacts.map((contact, i) =>(
+            {filtered.map((contact, i) =>(
                 <li key={i}>{contact.fullName}</li>
                 // key is important for object (map)!
             ))}
