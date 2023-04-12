@@ -45,9 +45,11 @@ function Form({addContacts, contacts}) {
          />
         </div>
 
-
-        <button>ADD CONTACT</button>
+     <div className='btn'> 
+        <button>Add Contacts</button>
+    </div>
     </form>
+
   );
 }
 
