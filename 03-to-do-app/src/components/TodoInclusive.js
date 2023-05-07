@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import TodoForm from './TodoForm';
+import Todo from './Todo';
 
 function TodoInclusive() {
   const [todoShow, setTodoShow] = useState([]);
@@ -12,6 +13,10 @@ function TodoInclusive() {
   return (
     <div>
         <TodoForm addTodo={addTodo}/>
+        {todoShow.map((arr,index)=>(
+            <Todo task = {arr} key={index} />
+        ))}
+        
     </div>
   )
 }
