@@ -1,11 +1,11 @@
 import './App.css';
 
-import Todo from './components/Todo';
+import TodoInclusive from './components/TodoInclusive';
 
 function App() {
   return (
     <>
-       <Todo />  
+       <TodoInclusive />  
     </>
   );
 }
