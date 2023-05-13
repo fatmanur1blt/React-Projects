@@ -26,7 +26,7 @@ function TodoInclusive() {
   }
   const editTask = (task, id) =>{
     setTodoShow(todoShow.map(arr => arr.id === id ?
-      {...arr, task, isEdit: !todoComplete.isEdit}:arr))
+      {...arr, task, isEdit: !arr.isEdit}:arr))
   }
   return (
     <div>
