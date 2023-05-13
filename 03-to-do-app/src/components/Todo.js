@@ -5,13 +5,13 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 function Todo({task,todoComplete, deleteTodo, editTodo}) {
   return (
-    <div className='Todo'>
+    <div className='todo'>
       <p onClick={() => todoComplete(task.id)}
          className={`${task.completed ? 'completed':""}`}>{task.task}</p>
       <div>
-        <FontAwesomeIcon icon={faPenToSquare} 
+        <FontAwesomeIcon className='font' icon={faPenToSquare} 
           onClick={()=> editTodo(task.id)}/>
-        <FontAwesomeIcon icon={faTrash} 
+        <FontAwesomeIcon className='font' icon={faTrash} 
           onClick={()=> deleteTodo(task.id)}/>
       </div>
     </div>

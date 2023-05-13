@@ -14,11 +14,11 @@ function TodoEdit({editTodo,task}) {
 
         <input type='text' 
         placeholder='update'
-        className='todo-input'
+        className='todo-input input-update'
         value={value}
         onChange={(e)=>setValue(e.target.value)}
         />
-        <button type='submit' className='todo-button'>UPDATE</button>
+        <button type='submit' className='todo-button btn-update'>UPDATE</button>
     </form>
   )
 }

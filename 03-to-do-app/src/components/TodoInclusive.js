@@ -9,7 +9,6 @@ function TodoInclusive() {
   const addTodo = arr =>{
     setTodoShow([...todoShow,{id:crypto.randomUUID(),
     task:arr, completed : false, editTodo:false}]);
-    console.log(todoShow);
   }
 
   const todoComplete = id => {
@@ -29,7 +28,7 @@ function TodoInclusive() {
       {...arr, task, isEdit: !arr.isEdit}:arr))
   }
   return (
-    <div>
+    <div className='todo-form'>
         <TodoForm addTodo={addTodo}/>
         {todoShow.map((arr,index)=>(
           arr.isEdit ? (
