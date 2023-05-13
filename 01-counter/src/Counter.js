@@ -12,6 +12,7 @@ function Counter (){
     const decreaseButton = () => {
         setCount (count - 1);
     };
+    console.log(crypto.randomUUID());
     return(
         <>      
         <h1>{count}</h1>
