@@ -20,32 +20,40 @@ body {
 }
 .todo-input{
   height: 20px;
-  padding: 2px;
+  padding: 5px;
   margin: 5px;
   width: 180px;
+  border-radius: .5rem;
 }
 .todo-button{
-  height: 27px;
-  padding: 2px;
+  height: 32px;
+  padding: 5px;
   margin: 5px;
-  width: 70px;
+  width: 80px;
+  border-radius: 8px;
 }
 .btn-update:hover{
   background-color: #ff758f;
 }
 .input-update{
   background-color: #ff758f;
+  padding: 5px;
 }
 .todo{
   display: flex;
   align-items: center;
   justify-content: space-between;
   border: solid 1px black;
+  border-radius: 10px;
   padding: 2px;
   margin: 15px;
   min-width: 300px;
   min-height: 30px;
   background-color: #ffccd5;
+}
+.todo-p{
+  cursor: pointer;
+  margin-left: .6rem;
 }
 .font{
   padding: 5px;
