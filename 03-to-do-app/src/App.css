@@ -31,6 +31,7 @@ body {
   margin: 5px;
   width: 80px;
   border-radius: 8px;
+  cursor:grab;
 }
 .btn-update:hover{
   background-color: #ff758f;
@@ -58,6 +59,7 @@ body {
 .font{
   padding: 5px;
   margin: 2px;
+  cursor:pointer;
 }
 .completed{
   text-decoration: line-through;
