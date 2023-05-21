@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
 function TodoForm({addTodo}) {
 
@@ -9,6 +9,7 @@ function TodoForm({addTodo}) {
         addTodo(value);
         setValue("");
     }
+
   return (
     <form onSubmit={submitForm}>
         <h1>TO-DO-APP</h1>

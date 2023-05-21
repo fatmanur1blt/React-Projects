@@ -10,10 +10,16 @@ function TodoInclusive() {
   //   localStorage.setItem('todoKey', JSON.stringify(todoShow))
   // });
 
-  // useEffect(()=>{
-  //   const todoShow = JSON.parse(localStorage.getItem('todoKey'))
-  //   setTodoShow(todoShow)
-  // },[]);
+   useEffect(()=>{
+     localStorage.setItem("todoKey",JSON.stringify(todoShow));
+   }); 
+
+
+    useEffect(()=>{
+      const todoShow = JSON.parse(localStorage.getItem('todoKey'))
+      setTodoShow(todoShow)
+    },[todoShow]);
+  
 
   const addTodo = arr =>{
     setTodoShow([...todoShow,{id:crypto.randomUUID(),
