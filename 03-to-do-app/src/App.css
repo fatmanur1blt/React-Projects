@@ -64,3 +64,21 @@ body {
 .completed{
   text-decoration: line-through;
 }
+@media screen and (max-width:400px) {
+[class*="todo"]{
+  width: 180px;
+}
+
+[class*="todo-input"]{
+  width:160px;
+  float: left;
+}
+[class*="todo-button"]{
+  width:70px;
+  float: left;
+}
+[class*="todo-form"]{
+  width:280px;
+  float: left;
+}
+}
